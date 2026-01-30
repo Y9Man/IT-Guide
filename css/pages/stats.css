@@ -1,0 +1,43 @@
+.info-panel { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin: 2rem auto; max-width: 1200px; border: 1px solid var(--border-color); text-align: center; }
+.info-text { color: var(--text-secondary); font-size: 1rem; margin-bottom: 1rem; }
+.data-source { color: var(--accent-blue); font-size: 0.9rem; font-style: italic; }
+
+.charts-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; padding: 2rem 0; }
+.chart-section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border-color); transition: all 0.3s; margin-bottom: 2rem; }
+.chart-section:hover { box-shadow: var(--shadow); border-color: var(--accent-blue); }
+.chart-title { font-size: 1.5rem; color: var(--accent-blue); margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.chart-subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.chart-wrapper { position: relative; height: 300px; width: 100%; }
+
+.chart-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem; }
+.chart-filter { padding: 6px 12px; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem; cursor: pointer; transition: all 0.3s; }
+.chart-filter:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+.chart-filter.active { background: var(--accent-blue); color: white; border-color: var(--accent-blue); }
+
+.data-table-container { overflow-x: auto; margin-top: 1rem; }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.data-table th { background: var(--bg-secondary); color: var(--accent-blue); padding: 12px; text-align: left; border-bottom: 2px solid var(--border-color); font-weight: 600; }
+.data-table td { padding: 12px; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); }
+.data-table tr:hover { background: var(--bg-secondary); }
+.salary-cell { color: var(--accent-green) !important; font-weight: 600; }
+.trend-up { color: var(--accent-green) !important; }
+.trend-down { color: #f85149 !important; }
+
+.infographic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.info-card { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border-color); text-align: center; }
+.info-card i { font-size: 2rem; color: var(--accent-blue); margin-bottom: 1rem; }
+.info-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+.info-card .value { font-size: 2rem; font-weight: 700; color: var(--accent-purple); margin-bottom: 0.5rem; }
+.info-card .description { color: var(--text-secondary); font-size: 0.9rem; }
+
+.export-btn { padding: 8px 16px; background: var(--accent-green); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
+.export-btn:hover { background: var(--accent-blue); transform: translateY(-2px); }
+
+canvas { max-width: 100%; }
+
+@media (max-width: 768px) {
+    .charts-container { grid-template-columns: 1fr; }
+    .chart-section { padding: 1rem; }
+    .chart-wrapper { height: 250px; }
+    .infographic-grid { grid-template-columns: 1fr; }
+}

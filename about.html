@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне | IT Guide</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/about.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Обо мне</h1>
+            <p class="page-subtitle">Разработчик этого сайта</p>
+        </div>
+    </header>
+
+    <main class="container about-container">
+        <aside class="profile-section">
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="assets/img/y9man.jpg" class="avatar" onerror="this.src='https://via.placeholder.com/200?text=Avatar'">
+                    <div class="online-status" title="online"></div>
+                </div>
+                
+                <h2 class="profile-name">y9man</h2>
+                <p class="profile-title">full-stack разработчик</p>
+                <p class="profile-location"><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</p>
+                
+                <div class="profile-socials">
+                    <a href="https://github.com/Y9Man" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+                    <a href="https://vk.com/y9man" class="social-btn vk"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/familyy9mana" class="social-btn telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="profile.html?uid=mNTA36nf6PfOjGmxx3Umnp0KAsf2" class="social-btn" title="Мой профиль в IT Guide">
+    <i class="fas fa-id-card"></i>
+</a>
+                </div>
+
+                <a href="https://github.com/Y9Man" target="_blank" class="btn btn-primary btn-full">
+                    <i class="fab fa-github"></i> Мой GitHub
+                </a>
+            </div>
+
+            <div class="stats-card">
+                <h3>📊 О проекте</h3>
+                <ul class="project-stats">
+                    <li><span>Страниц создано:</span> <strong>6</strong></li>
+                    <li><span>Технологий:</span> <strong>HTML, CSS, JS</strong></li>
+                    <li><span>Часов работы над сайтом:</span> <strong>50+</strong></li>
+                    <li><span>Посещений:</span> <strong id="visitorCount">0</strong></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="content-section">
+            <div class="about-block">
+                <h2>👋 Привет!</h2>
+                <p>
+                    Меня зовут <strong>Георгий</strong> (или просто <em>y9man</em>).  
+                    Этот сайт — мой индивидуальный проект по информатике.
+                </p>
+                <h3>🚀 История проекта</h3>
+                <p>
+                    Я создал <strong>IT Guide</strong>, чтобы помочь школьникам разобраться в мире IT. 
+                    В начале пути очень сложно понять, чем отличается Java от JavaScript или зачем нужен Backend. 
+                    Здесь я собрал всё, что узнал сам за время изучения программирования, в удобном формате.
+                </p>
+            </div>
+
+            <div class="about-block">
+                <h2>🛠️ Мои навыки</h2>
+                <p class="mb-2">Технологии, которые я использовал для создания этого сайта:</p>
+                
+                <div class="skill-bar-container">
+                    <div class="skill-info">
+                        <span>HTML5 / Semantic UI</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-bar-container">
+                    <div class="skill-info">
+                        <span>CSS3 / Flexbox / Grid</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                </div>
+
+                <div class="skill-bar-container">
+                    <div class="skill-info">
+                        <span>JavaScript (ES6+)</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                </div>
+
+                <div class="skill-bar-container">
+                    <div class="skill-info">
+                        <span>Git / GitHub</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+                </div>
+            </div>
+
+            <div class="about-block">
+                <h2>🎓 Чему я научился</h2>
+                <ul class="check-list">
+                    <li>Верстке на HTML5 и CSS3 с адаптивным дизайном под мобильные устройства</li>
+                    <li>JavaScript для создания интерактивных элементов (фильтры, графики, модальные окна)</li>
+                    <li>Работе с внешними библиотеками (Chart.js для графиков, Prism.js для кода)</li>
+                    <li>Организации файловой структуры и чистому коду</li>
+                </ul>
+            </div>
+
+            <div class="about-block future-plans">
+                <h2>🔮 Планы на будущее</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Сейчас</h4>
+                            <p>Запуск первой версии сайта IT Guide (MVP)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>В разработке</h4>
+                            <p>Создание интерактивных тестов для проверки знаний</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>2026</h4>
+                            <p>Добавление системы прогресса и личного кабинета</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2026 Языки программирования и направления</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/pages/about.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

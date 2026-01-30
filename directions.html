@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления в IT | IT Guide</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/directions.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Направления в IT</h1>
+            <p class="page-subtitle">Исследуй основные области разработки и найди свою</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все направления</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="gamedev">GameDev</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="directions-grid">
+            <div class="direction-card" data-category="web">
+                <div class="card-header">
+                    <div class="direction-icon icon-web"><i class="fas fa-globe"></i></div>
+                    <h2 class="direction-title">Web-разработка</h2>
+                    <div class="direction-tags">
+                        <span class="direction-tag tag-frontend">Frontend</span>
+                        <span class="direction-tag tag-backend">Backend</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="direction-description">Создание веб-сайтов и приложений. Frontend — то, что видит пользователь. Backend — логика на сервере.</p>
+                    <div class="detail-section">
+                        <h3><i class="fas fa-tasks"></i> Задачи</h3>
+                        <ul>
+                            <li>Верстка макетов (HTML/CSS)</li>
+                            <li>Логика интерфейса (JS)</li>
+                            <li>Работа с базами данных</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">80k - 300k ₽</span>
+                </div>
+            </div>
+
+            <div class="direction-card" data-category="mobile">
+                <div class="card-header">
+                    <div class="direction-icon icon-mobile"><i class="fas fa-mobile-alt"></i></div>
+                    <h2 class="direction-title">Mobile Разработка</h2>
+                    <div class="direction-tags">
+                        <span class="direction-tag tag-mobile">iOS/Android</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="direction-description">
+                        Создание приложений для iOS и Android. Можно разрабатывать нативные приложения 
+                        (Swift/Kotlin) или кроссплатформенные (Flutter/React Native). 
+                        Мобильная разработка — это не только приложения, но и интеграция с аппаратными 
+                        возможностями телефонов: камерой, GPS, сенсорами.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Flutter</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">100k - 350k ₽</span>
+                </div>
+            </div>
+            
+            <div class="direction-card" data-category="data">
+                <div class="card-header">
+                    <div class="direction-icon icon-data"><i class="fas fa-brain"></i></div>
+                    <h2 class="direction-title">Data Science</h2>
+                    <div class="direction-tags"><span class="direction-tag tag-data">AI/ML</span></div>
+                </div>
+                <div class="card-content">
+                    <p class="direction-description">
+                        Наука о данных — это извлечение знаний и инсайтов из структурированных и 
+                        неструктурированных данных. Data Scientist не только строит модели, но и 
+                        очищает данные, проводит статистический анализ и визуализирует результаты. 
+                        Это мост между математикой, программированием и бизнес-задачами.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">120k - 450k ₽</span>
+                </div>
+            </div>
+        <div class="direction-card" data-category="gamedev">
+                <div class="card-header">
+                    <div class="direction-icon icon-game"><i class="fab fa-steam-symbol"></i></div>
+                    <h2 class="direction-title">GameDev</h2>
+                    <div class="direction-tags">
+                        <span class="direction-tag tag-game">3D графика</span>
+                        <span class="direction-tag tag-game">мобильные игры</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="direction-description">
+                        Создание компьютерных и мобильных игр — от инди-проектов до AAA-хитов.
+                        Включает программирование игровой логики, работу с графикой (2D/3D), физикой, звуком и AI для NPC. Это одна из самых творческих областей в IT.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Unreal Engine</span>
+                        <span class="tech-tag">Lua</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenGL/DirectX</span>
+                        <span class="tech-tag">Blender/Maya</span>
+                    </div>
+                </div>
+        <div class="card-footer">
+            <a href="languages.html" class="btn-small">Подробнее</a>
+            <span class="salary">120k - 450k ₽</span>
+        </div>
+    </div> </div> <div class ="direction-card" data-category="gamedev">
+    </div></main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2025 Языки программирования и направления</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.direction-card').forEach(card => {
+                    if(filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

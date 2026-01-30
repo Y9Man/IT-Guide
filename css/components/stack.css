@@ -1,0 +1,54 @@
+.stack-section {
+    padding: 100px 0;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.stack-3d {
+    position: relative;
+    height: 400px;
+    perspective: 1000px; /* Создаем 3D пространство */
+}
+
+.stack-card {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 30px;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    
+    /* Начальное положение: карточки стопкой */
+    transform: rotateX(10deg) translateY(var(--offset-y)) translateZ(var(--offset-z));
+    filter: brightness(var(--bright));
+}
+
+/* Эффект при наведении на всю секцию - карточки "раздвигаются" */
+.stack-3d:hover .stack-card {
+    transform: rotateX(0deg) translateY(calc(var(--index) * 60px)) translateZ(0);
+    filter: brightness(1);
+}
+
+.stack-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.stack-card .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: var(--bg-element);
+    font-size: 0.7rem;
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фреймворки и библиотеки | IT Guide</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/frameworks.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Фреймворки и Инструменты</h1>
+            <p class="page-subtitle">Ускорители разработки: от основ до готовых решений</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">Что такое фреймворк?</h2>
+            <p class="section-text">
+                <strong>Фреймворк</strong> (от англ. framework — "каркас") — это программная платформа, определяющая структуру программной системы; программное обеспечение, облегчающее разработку и объединение разных компонентов большого программного проекта.
+            </p>
+                    </section>
+        
+        <section class="analogy-section">
+            <h3 class="analogy-title"><i class="fas fa-home"></i> Простая аналогия: Строим дом</h3>
+            <div class="analogy-grid">
+                <div class="analogy-item">
+                    <div class="analogy-icon"><i class="fas fa-hammer"></i></div>
+                    <h4>Чистый язык</h4>
+                    <p>Это кирпичи и цемент. Вы строите дом с нуля. Полная свобода, но очень долго и сложно. Вы сами делаете каждый инструмент.</p>
+                </div>
+                <div class="analogy-item">
+                    <div class="analogy-icon"><i class="fas fa-couch"></i></div>
+                    <h4>Библиотека</h4>
+                    <p>Это готовая мебель (IKEA). Вы построили дом сами, но купили готовый диван. Вы решаете, куда его поставить. Вы управляете библиотекой.</p>
+                </div>
+                <div class="analogy-item">
+                    <div class="analogy-icon"><i class="fas fa-building"></i></div>
+                    <h4>Фреймворк</h4>
+                    <p>Это готовый каркас дома с проводкой. Вам остается только поклеить обои и расставить мебель. Фреймворк управляет вами (правила игры).</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <h2 class="section-title">Различия в управлении (Inversion of Control)</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Критерий</th>
+                        <th>Чистый язык</th>
+                        <th>Библиотека</th>
+                        <th>Фреймворк</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Кто главный?</strong></td>
+                        <td>Вы</td>
+                        <td>Вы вызываете код</td>
+                        <td>Фреймворк вызывает ваш код</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Гибкость</strong></td>
+                        <td class="pro">Максимальная</td>
+                        <td class="pro">Высокая</td>
+                        <td>Ограничена правилами</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Скорость старта</strong></td>
+                        <td class="con">Медленно</td>
+                        <td>Средняя</td>
+                        <td class="pro">Очень быстро</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="roadmap-section" style="margin-top: 4rem;">
+            <h2 class="section-title">🗺️ Что учить в 2026?</h2>
+            <div class="roadmap-container">
+                <div class="roadmap-step" data-step="1">
+                    <h3>Какая цель?</h3>
+                    <div class="roadmap-options">
+                        <button class="roadmap-btn" onclick="nextStep('web')">Веб-сайты</button>
+                        <button class="roadmap-btn" onclick="nextStep('mobile')">Приложения</button>
+                    </div>
+                </div>
+                <div id="roadmap-result" class="roadmap-result" style="display:none;">
+                    <h3>Вам подойдет:</h3>
+                    <div id="result-content" class="result-highlight">React</div>
+                    <p id="result-desc">Отличный старт для веба</p>
+                    <button class="btn-reset" onclick="resetRoadmap()">Начать заново</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="filters-panel">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Поиск (например: React)...">
+            </div>
+            <div class="filter-groups">
+                <div class="filter-group">
+                    <span>Категория:</span>
+                    <button class="filter-chip active" data-filter="all">Все</button>
+                    <button class="filter-chip" data-filter="frontend">Frontend</button>
+                    <button class="filter-chip" data-filter="backend">Backend</button>
+                    <button class="filter-chip" data-filter="mobile">Mobile</button>
+                </div>
+                <div class="filter-group">
+                    <span>Сложность:</span>
+                    <button class="filter-chip" data-difficulty="all">Любая</button>
+                    <button class="filter-chip" data-difficulty="easy">Легко</button>
+                    <button class="filter-chip" data-difficulty="hard">Сложно</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="frameworks-grid" id="frameworksGrid">
+            </div>
+
+        <section class="comparison-section">
+            <h2 class="section-title">📊 Рыночная статистика</h2>
+            <div class="table-responsive">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Фреймворк</th>
+                            <th>Тип</th>
+                            <th>Язык</th>
+                            <th>Зарплата (RU)</th>
+                            <th>Сложность</th>
+                        </tr>
+                    </thead>
+                    <tbody id="compareTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="meme-section">
+            <p class="meme-text">"Я не выбираю фреймворки, я просто изучаю новый каждый месяц"</p>
+            <p class="meme-author">— Типичный фронтенд-разработчик в 2026</p>
+        </section>
+    </main>
+
+    <div id="fwModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2026 IT Guide</p></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/frameworks.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

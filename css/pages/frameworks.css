@@ -1,0 +1,447 @@
+.content-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.section-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.analogy-section {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.analogy-title {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.analogy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.analogy-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.analogy-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.analogy-icon {
+    font-size: 2.5rem;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.analogy-item h4 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.analogy-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background: var(--bg-secondary);
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.comparison-table td {
+    color: var(--text-secondary);
+}
+
+.comparison-table .pro {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.comparison-table .con {
+    color: #f85149;
+    font-weight: 600;
+}
+
+.roadmap-section {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.roadmap-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.roadmap-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent-blue);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.roadmap-btn:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.result-highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin: 1rem 0;
+}
+
+.btn-reset {
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reset:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.filters-panel {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.filter-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-group span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    min-width: 80px;
+}
+
+.filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.filter-chip:hover, .filter-chip.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.frameworks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.fw-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fw-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow);
+}
+
+.fw-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--bg-secondary);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    z-index: 2;
+}
+
+.fw-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fw-icon {
+    font-size: 3rem;
+}
+
+.fw-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.fw-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.fw-tag {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(0, 112, 243, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid rgba(0, 112, 243, 0.2);
+}
+
+.complexity-meter {
+    color: gold;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.fw-footer {
+    padding: 1rem 1.5rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.comparison-section {
+    margin-top: 4rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.compare-table th, .compare-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.compare-table th {
+    background: var(--bg-secondary);
+    color: var(--accent-blue);
+}
+
+.meme-section {
+    text-align: center;
+    padding: 2rem;
+    margin: 3rem 0;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px dashed var(--border-color);
+}
+
+.meme-text {
+    font-style: italic;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.meme-author {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal.active {
+    display: flex;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: 0.2s;
+}
+
+.close-modal:hover {
+    color: var(--accent-red);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .analogy-grid, .frameworks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .compare-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .roadmap-options {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Guide - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            background: radial-gradient(circle at 50% 20%, rgba(0, 112, 243, 0.15), transparent 70%);
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-shadow: 0 0 40px rgba(0, 112, 243, 0.3); }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 2rem; }
+        .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; transition: var(--transition); }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+        .card-icon { font-size: 2rem; color: var(--accent-blue); margin-bottom: 1rem; }
+    </style>
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Языки программирования и направления в IT</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.2rem;">Интерактивный гид для начинающих разработчиков</p>
+            <a href="directions.html" class="btn btn-primary">Начать обучение</a>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 4rem 0;">
+        <h2 style="text-align:center; margin-bottom: 2rem;">Быстрый старт</h2>
+        <div class="grid-cards">
+            <a href="directions.html" class="card">
+                <i class="fas fa-compass card-icon"></i>
+                <h3>Направления</h3>
+                <p>Web, Mobile, AI, Data Science - выбери свой путь.</p>
+            </a>
+            <a href="languages.html" class="card">
+                <i class="fas fa-language card-icon"></i>
+                <h3>Языки</h3>
+                <p>Python, JS, C++ и другие. Примеры кода и особенности.</p>
+            </a>
+            <a href="stats.html" class="card">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h3>Статистика</h3>
+                <p>Зарплаты и востребованность в 2026 году.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2025 IT Guide</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "python",
+    "name": "Python",
+    "level": "Backend / AI",
+    "description": "Универсальный язык, с которого часто начинают путь в Full-stack. Чистый синтаксис и мощные фреймворки (Django/FastAPI).",
+    "icon": "🐍",
+    "color": "#3776ab"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "level": "Frontend / Backend",
+    "description": "Единственный язык, который работает везде. Основа Full-stack: от интерактивных интерфейсов до серверов на Node.js.",
+    "icon": "🟨",
+    "color": "#f7df1e"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "level": "Architecture",
+    "description": "Инструмент для профи. Делает код надежным, добавляя типизацию в JavaScript. Маст-хэв для крупных проектов.",
+    "icon": "🟦",
+    "color": "#3178c6"
+  }
+]

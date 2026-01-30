@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Guide - Языки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/languages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Каталог языков</h1>
+            <p>ТОП популярных языков с примерами кода</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters-panel">
+            <input type="text" id="searchInput" class="search-input" placeholder="Поиск языка...">
+            <div id="filterButtons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="game">GameDev</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+        </div>
+
+        <div id="languagesGrid" class="languages-grid">
+            </div>
+    </main>
+
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2025 IT Guide</p></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/pages/languages.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

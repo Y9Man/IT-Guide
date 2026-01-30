@@ -1,0 +1,130 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    padding: 20px;
+    background-image: radial-gradient(circle at 50% 50%, rgba(0, 112, 243, 0.05), transparent 70%);
+}
+
+.auth-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.auth-card h2 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.auth-card p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.btn-social i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-social:active {
+    transform: translateY(0);
+}
+
+.btn-github {
+    background-color: #24292e;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.btn-github:hover {
+    background-color: #2f363d;
+}
+
+.btn-google {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+.btn-google:hover {
+    background-color: #f1f1f1;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+    opacity: 0.5;
+}
+
+.divider::before {
+    margin-right: 15px;
+}
+
+.divider::after {
+    margin-left: 15px;
+}
+
+.link-guest {
+    display: inline-block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed transparent;
+}
+
+.link-guest:hover {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

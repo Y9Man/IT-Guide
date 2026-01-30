@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика IT-рынка | IT Guide</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/stats.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+        
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="directions.html">Направления</a></li>
+            <li><a href="languages.html">Языки</a></li>
+            <li><a href="frameworks.html">Фреймворки</a></li>
+            <li><a href="stats.html">Статистика</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="users.html">Пользователи</a></li>
+        </ul>
+        
+        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+        <div id="nav-auth" style="margin-left: 15px;"></div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Статистика IT-рынка 2026</h1>
+            <p class="page-subtitle">Актуальные данные по популярности языков, зарплатам и востребованности специалистов</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="info-panel">
+            <p class="info-text">Данные основаны на анализе вакансий и опросов разработчиков.</p>
+            <p class="data-source">Источники: Stack Overflow, TIOBE, данные рынка труда (Прогноз 2026)</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="infographic-grid">
+            <div class="info-card">
+                <i class="fas fa-users"></i>
+                <h3>Разработчиков в РФ</h3>
+                <div class="value">850K+</div>
+                <p class="description">Рост за счет курсов и AI</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Средняя зарплата</h3>
+                <div class="value">210K ₽</div>
+                <p class="description">Медиана по рынку (Middle)</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-robot"></i>
+                <h3>Влияние AI</h3>
+                <div class="value">65%</div>
+                <p class="description">Кода пишется с Copilot</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-fire"></i>
+                <h3>Топ вакансия</h3>
+                <div class="value">AI Engineer</div>
+                <p class="description">Самый высокий спрос</p>
+            </div>
+        </div>
+
+        <section class="chart-section">
+            <div class="chart-title">
+                <span>Популярность языков</span>
+                <button class="export-btn" onclick="exportChart('popularityChart', 'popularity')"><i class="fas fa-download"></i> Экспорт</button>
+            </div>
+            <div class="chart-filters">
+                <button class="chart-filter active" data-chart="popularity" data-type="pie">Круговая</button>
+                <button class="chart-filter" data-chart="popularity" data-type="bar">Столбчатая</button>
+            </div>
+            <div class="chart-wrapper"><canvas id="popularityChart"></canvas></div>
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead><tr><th>Язык</th><th>Доля рынка</th><th>Изменение</th><th>Применение</th></tr></thead>
+                    <tbody id="popularityTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-title">
+                <span>Зарплаты (RUB)</span>
+                <button class="export-btn" onclick="exportChart('salaryChart', 'salary')"><i class="fas fa-download"></i> Экспорт</button>
+            </div>
+            <div class="chart-filters">
+                <button class="chart-filter active" data-chart="salary" data-type="bar">Столбчатая</button>
+            </div>
+            <div class="chart-wrapper"><canvas id="salaryChart"></canvas></div>
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead><tr><th>Направление</th><th>Junior</th><th>Middle</th><th>Senior</th><th>Тренд</th></tr></thead>
+                    <tbody id="salaryTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-title">
+                <span>Востребованность</span>
+                <button class="export-btn" onclick="exportChart('demandChart', 'demand')"><i class="fas fa-download"></i> Экспорт</button>
+            </div>
+            <div class="chart-wrapper"><canvas id="demandChart"></canvas></div>
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead><tr><th>Направление</th><th>Вакансий</th><th>Рост</th><th>Конкуренция</th><th>Перспектива</th></tr></thead>
+                    <tbody id="demandTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-title">
+                <span>Фреймворки</span>
+                <button class="export-btn" onclick="exportChart('frameworksChart', 'frameworks')"><i class="fas fa-download"></i> Экспорт</button>
+            </div>
+            <div class="chart-wrapper"><canvas id="frameworksChart"></canvas></div>
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead><tr><th>Фреймворк</th><th>Использование</th><th>Любовь</th><th>Тип</th><th>Язык</th></tr></thead>
+                    <tbody id="frameworksTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
+            <p class="copyright">© 2025 Языки программирования и направления</p>
+        </div>
+    </footer>
+<script src="js/common.js"></script>
+    <script src="js/pages/stats.js"></script>
+    
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
