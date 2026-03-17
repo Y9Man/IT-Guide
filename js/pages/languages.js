@@ -19,17 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach(lang => {
             const card = document.createElement('div');
             card.className = 'lang-card';
+            
+            // Защита от старых форматов данных
+            const tags = lang.tags || lang.categories || [];
+            const tagsHtml = tags.map(tag => `<span class="lang-tag tag-${tag}">${tag}</span>`).join('');
+
             card.innerHTML = `
                 <div class="card-header-lang">
-                    <i class="${lang.icon} lang-icon"></i>
+                    <i class="${lang.icon || lang.iconClass} lang-icon"></i>
                     <div>
                         <h3>${lang.name}</h3>
                         <small style="color:var(--text-secondary)">${lang.year}</small>
                     </div>
                 </div>
+                <div class="lang-tags-container" style="margin-bottom: 10px;">
+                    ${tagsHtml}
+                </div>
                 <p class="lang-desc">${lang.description}</p>
                 <div class="code-preview-container">
-                    <pre><code class="language-${lang.codeLang}">${escapeHtml(lang.code)}</code></pre>
+                    <pre><code class="language-${lang.codeLang || 'javascript'}">${escapeHtml(lang.code || lang.helloWorld || '')}</code></pre>
                 </div>
                 <button class="btn btn-primary" style="width:100%; margin-top: auto;" onclick="openLangModal('${lang.id}')">
                     Подробнее
@@ -42,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function escapeHtml(text) {
+        if (!text) return '';
         return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
@@ -52,13 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filtered = languagesData.filter(lang => {
             const matchesSearch = lang.name.toLowerCase().includes(query);
-            const matchesFilter = activeFilter === 'all' || lang.tags.includes(activeFilter);
+            
+            // Безопасная проверка тегов
+            const itemTags = lang.tags || lang.categories || [];
+            const matchesFilter = activeFilter === 'all' || itemTags.includes(activeFilter);
+            
             return matchesSearch && matchesFilter;
         });
         renderCards(filtered);
     }
 
     searchInput.addEventListener('input', filterData);
+    
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -71,9 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = languagesData.find(l => l.id === id);
         if (!lang) return;
         
+        const features = lang.features || lang.pros || [];
+        const links = lang.links || [];
+        
         modalBody.innerHTML = `
             <div style="text-align: center; margin-bottom: 2rem;">
-                <i class="${lang.icon}" style="font-size: 4rem;"></i>
+                <i class="${lang.icon || lang.iconClass}" style="font-size: 4rem;"></i>
                 <h2 style="margin-top: 1rem;">${lang.name}</h2>
                 
                 <button id="btn-study-${lang.id}" class="btn btn-success" style="margin-top: 15px; padding: 10px 20px; border:none; border-radius: 8px; cursor: pointer; background: #22c55e; color: white; font-weight: bold; font-size: 1rem; transition: 0.3s;">
@@ -81,17 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             </div>
             
-            <h3>📖 История</h3>
-            <p>${lang.history}</p>
+            <h3>📖 Описание</h3>
+            <p>${lang.history || lang.fullDescription || lang.description}</p>
             
             <h3 style="margin-top: 1.5rem;">⚡ Ключевые особенности</h3>
             <ul style="margin-bottom: 1.5rem;">
-                ${lang.features.map(f => `<li>${f}</li>`).join('')}
+                ${features.map(f => `<li>${f}</li>`).join('')}
             </ul>
             
             <h3>🔗 Полезные ссылки</h3>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                ${lang.links.map(l => `<a href="${l.url}" target="_blank" class="btn btn-secondary">${l.name}</a>`).join('')}
+                ${links.map(l => `<a href="${l.url}" target="_blank" class="btn btn-secondary">${l.name}</a>`).join('')}
             </div>
         `;
         
