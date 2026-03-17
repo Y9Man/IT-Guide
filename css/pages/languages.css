@@ -96,11 +96,16 @@
     border: 1px solid var(--border-color);
 }
 
+/* Цвета тегов технологий */
 .tag-web { color: #61dafb; border-color: rgba(97, 218, 251, 0.2); }
 .tag-data { color: #f0883e; border-color: rgba(240, 136, 62, 0.2); }
 .tag-mobile { color: #a97bff; border-color: rgba(169, 123, 255, 0.2); }
 .tag-system { color: #f85149; border-color: rgba(248, 81, 73, 0.2); }
 .tag-game { color: #56d364; border-color: rgba(86, 211, 100, 0.2); }
+/* Новые цвета */
+.tag-cybersecurity { color: #ef4444; border-color: rgba(239, 68, 68, 0.2); }
+.tag-devops { color: #3b82f6; border-color: rgba(59, 130, 246, 0.2); }
+.tag-design { color: #ec4899; border-color: rgba(236, 72, 153, 0.2); }
 
 .code-preview-container {
     background: #1a1a1a;
