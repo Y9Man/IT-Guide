@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             cards.forEach(card => {
                 if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                    }, 50);
                 } else {
-                    card.style.display = 'none';
                     card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
                 }
             });
         });

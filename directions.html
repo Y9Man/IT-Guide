@@ -10,71 +10,92 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/IT-Guide_icon.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/img/IT-Guide_icon.jpg">
 </head>
 <body class="dark-theme">
     <nav class="navbar">
-    <div class="container">
-        <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
-        
-        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
-        
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="directions.html">Направления</a></li>
-            <li><a href="languages.html">Языки</a></li>
-            <li><a href="frameworks.html">Фреймворки</a></li>
-            <li><a href="stats.html">Статистика</a></li>
-            <li><a href="about.html">Обо мне</a></li>
-            <li><a href="users.html">Пользователи</a></li>
-        </ul>
-        
-        <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
-
-        <div id="nav-auth" style="margin-left: 15px;"></div>
-    </div>
-</nav>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-code"></i> IT Guide</a>
+            
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="directions.html" class="active">Направления</a></li>
+                <li><a href="languages.html">Языки</a></li>
+                <li><a href="frameworks.html">Фреймворки</a></li>
+                <li><a href="stats.html">Статистика</a></li>
+                <li><a href="users.html">Пользователи</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+            <div id="nav-auth" style="margin-left: 15px;"></div>
+        </div>
+    </nav>
 
     <header class="page-header">
         <div class="container">
             <h1 class="page-title">Направления в IT</h1>
-            <p class="page-subtitle">Исследуй основные области разработки и найди свою</p>
-            
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Все направления</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="data">Data Science</button>
-                <button class="filter-btn" data-filter="gamedev">GameDev</button>
-            </div>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Выбери свой путь: от создания сайтов и мобильных приложений до реверс-инжиниринга и дизайна интерфейсов.
+            </p>
         </div>
     </header>
 
     <main class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Все направления</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="gamedev">Gamedev</button>
+            <button class="filter-btn" data-filter="data-science">Data Science</button>
+            <button class="filter-btn" data-filter="cybersecurity">Безопасность</button>
+            <button class="filter-btn" data-filter="devops">DevOps</button>
+            <button class="filter-btn" data-filter="design">Дизайн</button>
+        </div>
+
         <div class="directions-grid">
+            
             <div class="direction-card" data-category="web">
                 <div class="card-header">
-                    <div class="direction-icon icon-web"><i class="fas fa-globe"></i></div>
+                    <div class="direction-icon" style="color: #0070f3;"><i class="fas fa-globe"></i></div>
                     <h2 class="direction-title">Web-разработка</h2>
-                    <div class="direction-tags">
-                        <span class="direction-tag tag-frontend">Frontend</span>
-                        <span class="direction-tag tag-backend">Backend</span>
-                    </div>
+                    <p class="direction-desc">Создание веб-сайтов и приложений. Frontend — визуальная часть. Backend — серверная логика.</p>
                 </div>
-                <div class="card-content">
-                    <p class="direction-description">Создание веб-сайтов и приложений. Frontend — то, что видит пользователь. Backend — логика на сервере.</p>
+                <div class="card-body">
                     <div class="detail-section">
-                        <h3><i class="fas fa-tasks"></i> Задачи</h3>
+                        <h3>Что делают?</h3>
                         <ul>
-                            <li>Верстка макетов (HTML/CSS)</li>
-                            <li>Логика интерфейса (JS)</li>
-                            <li>Работа с базами данных</li>
+                            <li>Верстка интерфейсов (HTML/CSS)</li>
+                            <li>Разработка логики (JavaScript)</li>
+                            <li>Работа с базами данных и API</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Легко начать</li>
+                                <li>Огромное количество вакансий</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Высокая конкуренция на старте</li>
+                                <li>Технологии быстро меняются</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -85,23 +106,43 @@
 
             <div class="direction-card" data-category="mobile">
                 <div class="card-header">
-                    <div class="direction-icon icon-mobile"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="direction-icon" style="color: #22863a;"><i class="fas fa-mobile-alt"></i></div>
                     <h2 class="direction-title">Mobile Разработка</h2>
-                    <div class="direction-tags">
-                        <span class="direction-tag tag-mobile">iOS/Android</span>
-                    </div>
+                    <p class="direction-desc">Создание приложений для iOS и Android с использованием нативных или кроссплатформенных технологий.</p>
                 </div>
-                <div class="card-content">
-                    <p class="direction-description">
-                        Создание приложений для iOS и Android. Можно разрабатывать нативные приложения 
-                        (Swift/Kotlin) или кроссплатформенные (Flutter/React Native). 
-                        Мобильная разработка — это не только приложения, но и интеграция с аппаратными 
-                        возможностями телефонов: камерой, GPS, сенсорами.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Swift</span>
-                        <span class="tech-tag">Kotlin</span>
-                        <span class="tech-tag">Flutter</span>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Проектирование UI для смартфонов</li>
+                            <li>Работа с камерой, GPS и сенсорами</li>
+                            <li>Публикация в App Store / Google Play</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">React Native</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Продукт всегда в кармане</li>
+                                <li>Понятный результат работы</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Сложности с публикацией в сторы</li>
+                                <li>Зоопарк устройств (особенно Android)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -109,24 +150,46 @@
                     <span class="salary">100k - 350k ₽</span>
                 </div>
             </div>
-            
-            <div class="direction-card" data-category="data">
+
+            <div class="direction-card" data-category="gamedev">
                 <div class="card-header">
-                    <div class="direction-icon icon-data"><i class="fas fa-brain"></i></div>
-                    <h2 class="direction-title">Data Science</h2>
-                    <div class="direction-tags"><span class="direction-tag tag-data">AI/ML</span></div>
+                    <div class="direction-icon" style="color: #f85149;"><i class="fab fa-steam-symbol"></i></div>
+                    <h2 class="direction-title">GameDev</h2>
+                    <p class="direction-desc">Создание игр для ПК, консолей и мобильных платформ. Работа с графикой, физикой и игровой логикой.</p>
                 </div>
-                <div class="card-content">
-                    <p class="direction-description">
-                        Наука о данных — это извлечение знаний и инсайтов из структурированных и 
-                        неструктурированных данных. Data Scientist не только строит модели, но и 
-                        очищает данные, проводит статистический анализ и визуализирует результаты. 
-                        Это мост между математикой, программированием и бизнес-задачами.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">SQL</span>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Написание игровых механик</li>
+                            <li>Работа с 3D/2D движками</li>
+                            <li>Создание ИИ для врагов</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">Unreal Engine</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Работа мечты для геймеров</li>
+                                <li>Творческая свобода (в инди)</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Частые переработки (кранчи)</li>
+                                <li>Сложная математика</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -134,62 +197,261 @@
                     <span class="salary">120k - 450k ₽</span>
                 </div>
             </div>
-        <div class="direction-card" data-category="gamedev">
+
+            <div class="direction-card" data-category="data-science">
                 <div class="card-header">
-                    <div class="direction-icon icon-game"><i class="fab fa-steam-symbol"></i></div>
-                    <h2 class="direction-title">GameDev</h2>
-                    <div class="direction-tags">
-                        <span class="direction-tag tag-game">3D графика</span>
-                        <span class="direction-tag tag-game">мобильные игры</span>
+                    <div class="direction-icon" style="color: #f0883e;"><i class="fas fa-brain"></i></div>
+                    <h2 class="direction-title">Data Science</h2>
+                    <p class="direction-desc">Извлечение знаний из массивов информации. Статистический анализ, машинное обучение и нейросети.</p>
+                </div>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Сбор и очистка больших данных</li>
+                            <li>Обучение ИИ и нейросетей</li>
+                            <li>Построение предиктивных моделей</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Работа на острие прогресса</li>
+                                <li>Очень высокие зарплаты</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Нужна сильная математика</li>
+                                <li>Много рутины с очисткой данных</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <p class="direction-description">
-                        Создание компьютерных и мобильных игр — от инди-проектов до AAA-хитов.
-                        Включает программирование игровой логики, работу с графикой (2D/3D), физикой, звуком и AI для NPC. Это одна из самых творческих областей в IT.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">Unreal Engine</span>
-                        <span class="tech-tag">Lua</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenGL/DirectX</span>
-                        <span class="tech-tag">Blender/Maya</span>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">120k - 450k ₽</span>
+                </div>
+            </div>
+
+            <div class="direction-card" data-category="cybersecurity">
+                <div class="card-header">
+                    <div class="direction-icon" style="color: #a855f7;"><i class="fas fa-microchip"></i></div>
+                    <h2 class="direction-title">Reverse Engineering</h2>
+                    <p class="direction-desc">Исследование готового ПО для понимания принципов его работы, поиска уязвимостей и анализа памяти.</p>
+                </div>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Анализ бинарных файлов и декомпиляция</li>
+                            <li>Исследование работы античитов и защит</li>
+                            <li>Поиск уязвимостей (Exploit Development)</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C/C++</span>
+                            <span class="tech-tag">Assembly</span>
+                            <span class="tech-tag">IDA Pro</span>
+                            <span class="tech-tag">x64dbg</span>
+                            <span class="tech-tag">Cheat Engine</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Высочайший уровень знаний ПК</li>
+                                <li>Уникальная и элитная ниша</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Порог входа — космос</li>
+                                <li>Нужно знать архитектуру CPU</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-        <div class="card-footer">
-            <a href="languages.html" class="btn-small">Подробнее</a>
-            <span class="salary">120k - 450k ₽</span>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">200k - 600k+ ₽</span>
+                </div>
+            </div>
+
+            <div class="direction-card" data-category="cybersecurity">
+                <div class="card-header">
+                    <div class="direction-icon" style="color: #ef4444;"><i class="fas fa-shield-alt"></i></div>
+                    <h2 class="direction-title">Cybersecurity (ИБ)</h2>
+                    <p class="direction-desc">Защита систем, сетей и программ от цифровых атак. Этичный хакинг и аудит безопасности.</p>
+                </div>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Пентестинг (поиск дыр в системах)</li>
+                            <li>Настройка защиты серверов и сетей</li>
+                            <li>Расследование киберинцидентов</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Kali Linux</span>
+                            <span class="tech-tag">Metasploit</span>
+                            <span class="tech-tag">Wireshark</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Всегда актуально</li>
+                                <li>Чувствуешь себя хакером</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Огромная ответственность</li>
+                                <li>Нужно знать сети от и до</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">150k - 500k ₽</span>
+                </div>
+            </div>
+
+            <div class="direction-card" data-category="devops">
+                <div class="card-header">
+                    <div class="direction-icon" style="color: #3b82f6;"><i class="fas fa-infinity"></i></div>
+                    <h2 class="direction-title">DevOps Engineering</h2>
+                    <p class="direction-desc">Автоматизация процессов разработки, настройки серверов и развертывания приложений (CI/CD).</p>
+                </div>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Настройка пайплайнов для деплоя</li>
+                            <li>Управление облачной инфраструктурой</li>
+                            <li>Настройка серверов и контейнеров</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">GitLab CI</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Очень высокие зарплаты</li>
+                                <li>Минимум рутинной работы</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Огромный зоопарк технологий</li>
+                                <li>Часто нужно быть на связи 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">250k - 600k ₽</span>
+                </div>
+            </div>
+
+            <div class="direction-card" data-category="design">
+                <div class="card-header">
+                    <div class="direction-icon" style="color: #ec4899;"><i class="fas fa-pencil-ruler"></i></div>
+                    <h2 class="direction-title">UI/UX Design</h2>
+                    <p class="direction-desc">Проектирование логики пользовательского опыта (UX) и создание красивого визуала интерфейсов (UI).</p>
+                </div>
+                <div class="card-body">
+                    <div class="detail-section">
+                        <h3>Что делают?</h3>
+                        <ul>
+                            <li>Анализ пути пользователя</li>
+                            <li>Создание кликабельных прототипов</li>
+                            <li>Отрисовка макетов для разработчиков</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Стек технологий</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">Illustrator</span>
+                            <span class="tech-tag">Principle</span>
+                        </div>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3>Плюсы</h3>
+                            <ul>
+                                <li>Творческая работа</li>
+                                <li>Сразу видишь визуал. результат</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3>Минусы</h3>
+                            <ul>
+                                <li>Правки от заказчиков</li>
+                                <li>Много общения с клиентами</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="languages.html" class="btn-small">Подробнее</a>
+                    <span class="salary">100k - 350k ₽</span>
+                </div>
+            </div>
+
         </div>
-    </div> </div> <div class ="direction-card" data-category="gamedev">
-    </div></main>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-logo"><i class="fas fa-code"></i> IT Guide</div>
-            <p class="copyright">© 2025 Языки программирования и направления</p>
+            <div class="footer-logo">
+                <img src="assets/img/IT-Guide_icon.jpg" alt="Logo" style="height: 24px; border-radius: 50%; margin-right: 8px; vertical-align: middle;">
+                IT Guide
+            </div>
+            <p class="copyright">© 2026 IT Guide. Твой навигатор в мире технологий.</p>
         </div>
     </footer>
 
     <script src="js/common.js"></script>
     <script type="module" src="js/auth.js"></script>
-    <script>
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                document.querySelectorAll('.direction-card').forEach(card => {
-                    if(filter === 'all' || card.dataset.category.includes(filter)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/directions.js"></script>
 </body>
 </html>
